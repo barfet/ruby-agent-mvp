@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        RAILS_ENV: production
+    ports:
+      - "3000:3000"
+    environment:
+      - RAILS_ENV=production
+      - RAILS_SERVE_STATIC_FILES=true
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_USERNAME=${DATABASE_USERNAME}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - REDIS_URL=${REDIS_URL}
+      - SECRET_KEY_BASE=${SECRET_KEY_BASE}
+      - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+    depends_on:
+      - sidekiq
+
+  sidekiq:
+    build:
+      context: .
+      args:
+        RAILS_ENV: production
+    command: bundle exec sidekiq
+    environment:
+      - RAILS_ENV=production
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_USERNAME=${DATABASE_USERNAME}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - REDIS_URL=${REDIS_URL}
+      - SECRET_KEY_BASE=${SECRET_KEY_BASE}
+      - RAILS_MASTER_KEY=${RAILS_MASTER_KEY} 

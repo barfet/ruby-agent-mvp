@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+# Build the images
+docker-compose -f docker-compose.prod.yml build
+
+# Start the services
+docker-compose -f docker-compose.prod.yml up "$@" 
