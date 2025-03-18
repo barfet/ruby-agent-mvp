@@ -20,7 +20,7 @@ gem "tailwindcss-rails"
 gem "jbuilder"
 
 # OpenAI API client for Ruby
-gem "ruby-openai", "~> 6.3"
+gem "ruby-openai", "~> 8.0"
 
 # Rate limiting and throttling
 gem "rack-attack", "~> 6.7"
