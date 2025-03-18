@@ -1,1 +1,18 @@
- 
+default: &default
+  url: redis://localhost:6379/1
+  timeout: 1
+  pool_size: 5
+  pool_timeout: 5
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  url: redis://localhost:6379/2
+
+production:
+  <<: *default
+  url: <%= ENV['REDIS_URL'] %>
+  pool_size: <%= ENV['REDIS_POOL_SIZE'] || 5 %>
+  pool_timeout: <%= ENV['REDIS_POOL_TIMEOUT'] || 5 %> 

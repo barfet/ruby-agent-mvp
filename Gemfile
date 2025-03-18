@@ -31,6 +31,9 @@ gem "dotenv-rails", "~> 3.0"
 # Background job processing
 gem "sidekiq", "~> 7.2"
 
+# Redis for caching and Sidekiq
+gem "redis", ">= 4.0.1"
+
 # HTTP client with persistent connections
 gem "faraday", "~> 2.9"
 
