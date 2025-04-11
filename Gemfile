@@ -26,7 +26,7 @@ gem "ruby-openai", "~> 6.3"
 gem "rack-attack", "~> 6.7"
 
 # Environment variables management
-gem "dotenv-rails", "~> 3.0"
+gem "dotenv-rails", "~> 3.1"
 
 # Background job processing
 gem "sidekiq", "~> 7.2"
