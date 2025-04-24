@@ -46,7 +46,7 @@ gem "sentry-rails", "~> 5.16"
 
 # Security
 gem "rack-cors", "~> 2.0"
-gem "secure_headers", "~> 6.5"
+gem "secure_headers", "~> 7.1"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
