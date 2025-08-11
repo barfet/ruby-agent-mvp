@@ -29,7 +29,7 @@ gem "rack-attack", "~> 6.7"
 gem "dotenv-rails", "~> 3.0"
 
 # Background job processing
-gem "sidekiq", "~> 7.2"
+gem "sidekiq", "~> 8.0"
 
 # Redis for caching and Sidekiq
 gem "redis", ">= 4.0.1"
