@@ -35,7 +35,7 @@ gem "sidekiq", "~> 7.2"
 gem "redis", ">= 4.0.1"
 
 # HTTP client with persistent connections
-gem "faraday", "~> 2.9"
+gem "faraday", "~> 2.14"
 
 # API documentation
 gem "rswag", "~> 2.13"
